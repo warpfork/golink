@@ -1,0 +1,16 @@
+# Apple
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.DS_Store
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Windows
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+
+# Executables
+/golink

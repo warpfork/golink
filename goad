@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Where is this script located?
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Project details
+prefix="polydawn.net/golink"
+executable="golink"
+
+(
+	cd "$DIR"
+
+	export GOPATH="$PWD"/.gopath/
+	export BASEDIR="$PWD"
+
+	# Build once
+	go build -o $executable $prefix/main
+)
