@@ -25,7 +25,7 @@ Cloning into '.gopath/src/polydawn.net/pogo'...
 
 Anyone who has golang installed can build your project!
 ```bash
-$ clone https://github.com/kofalt/golink && cd golink
+$ git clone https://github.com/kofalt/golink && cd golink
 $ ./goad
 ```
 
