@@ -15,6 +15,11 @@ func main() {
 `
 const GoadTemplate = `#!/bin/bash
 
+# Project details
+pkg="PACKAGE"
+name="${pkg##*/}"
+
+
 # Where is this script located?
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$DIR"
@@ -26,11 +31,6 @@ export BASEDIR="$PWD"
 [ -z "$2" ] && SUBSECTION="./..." || SUBSECTION="./$2"
 
 
-# Project details
-pkg="PACKAGE"
-name="NAME"
-
-
 case "$1" in
 	init)
 		# it's your responsibility to do this the first time
@@ -38,7 +38,7 @@ case "$1" in
 		git submodule update --init
 		;;
 	build)
-		go build -o $name $pkg/main
+		go build -o $name $pkg
 		;;
 	test)
 		go test -v "$SUBSECTION"
