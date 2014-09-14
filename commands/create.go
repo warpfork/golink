@@ -52,7 +52,7 @@ func (opts *CreateCmdOpts) Execute(args []string) error {
 
 	// Run build
 	Println("Building example...")
-	Sh(Abs("goad"))(DefaultIO)()
+	Sh(Abs("goad"))("build")(DefaultIO)()
 	Sh(Abs(name))(DefaultIO)()
 
 	return nil
